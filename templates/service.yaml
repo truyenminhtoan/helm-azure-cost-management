@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "helm-azure-cost-management.fullname" . }}
+  labels:
+    {{- include "helm-azure-cost-management.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "helm-azure-cost-management.selectorLabels" . | nindent 4 }}
