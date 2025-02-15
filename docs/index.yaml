@@ -3,7 +3,17 @@ entries:
   helm-azure-cost-management:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-02-15T12:11:27.838035+07:00"
+    created: "2025-02-15T12:13:02.085664+07:00"
+    description: A Helm chart for Kubernetes
+    digest: 10d3c5bde2041fa94d61acf7f653254682e08848ca91edf5cf5e7dd895026d5b
+    name: helm-azure-cost-management
+    type: application
+    urls:
+    - https://truyenminhtoan.github.io/helm-azure-cost-management/helm-azure-cost-management-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-02-15T12:13:02.085115+07:00"
     description: A Helm chart for Kubernetes
     digest: 8d5b73ce9f7f89cb455b947ca4e5dde64301de6700873e96872fef5db434596d
     name: helm-azure-cost-management
@@ -13,7 +23,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-02-15T12:11:27.837521+07:00"
+    created: "2025-02-15T12:13:02.08462+07:00"
     description: A Helm chart for Kubernetes
     digest: 3fb93032305dda808804c638a3098357076c176cabea5ca8a82724deab0a7dc9
     name: helm-azure-cost-management
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://truyenminhtoan.github.io/helm-azure-cost-management/helm-azure-cost-management-1.0.2.tgz
     version: 1.0.2
-generated: "2025-02-15T12:11:27.83666+07:00"
+generated: "2025-02-15T12:13:02.083825+07:00"
