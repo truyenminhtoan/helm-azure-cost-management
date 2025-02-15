@@ -12,4 +12,4 @@ git push origin main
 helm repo add  azure-cost-management https://truyenminhtoan.github.io/helm-azure-cost-management/
 helm repo update
 
-helm install my-release azure-cost-management/helm-azure-cost-management
+helm install my-cost azure-cost-management/helm-azure-cost-management

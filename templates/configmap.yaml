@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  PORT: {{ .Values.config.PORT | quote }}
+  WEBHOOK_URL: {{ .Values.config.WEBHOOK_URL | quote }}
+  TENANT_ID: {{ .Values.config.TENANT_ID | quote }}
+  CLIENT_ID: {{ .Values.config.CLIENT_ID | quote }}
+  CLIENT_SECRET: {{ .Values.config.CLIENT_SECRET | quote }}
+  SUBSCRIPTION_ID: {{ .Values.config.SUBSCRIPTION_ID | quote }}
+  RESOURCE_GROUP: {{ .Values.config.RESOURCE_GROUP | quote }}
