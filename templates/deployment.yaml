@@ -49,10 +49,42 @@ spec:
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
-                  envFrom:
-          - configMapRef:
-              name: {{ .Release.Name }}-config
-              optional: false
+          env:
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: PORT
+            - name: WEBHOOK_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: WEBHOOK_URL
+            - name: TENANT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: TENANT_ID
+            - name: CLIENT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: CLIENT_ID
+            - name: CLIENT_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: CLIENT_SECRET
+            - name: SUBSCRIPTION_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: SUBSCRIPTION_ID
+            - name: RESOURCE_GROUP
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: RESOURCE_GROUP
           {{- end }}
       {{- with .Values.volumes }}
       volumes:

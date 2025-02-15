@@ -13,3 +13,4 @@ helm repo add  azure-cost-management https://truyenminhtoan.github.io/helm-azure
 helm repo update
 
 helm install my-cost azure-cost-management/helm-azure-cost-management
+helm upgrade my-cost azure-cost-management/helm-azure-cost-management
